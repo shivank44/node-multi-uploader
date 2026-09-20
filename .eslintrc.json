@@ -1,0 +1,57 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es2022": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "script"
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "no-process-exit": "off",
+    "eqeqeq": ["error", "always"],
+    "curly": ["error", "all"],
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "comma-dangle": ["error", "always-multiline"],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-arrow-callback": "warn",
+    "no-throw-literal": "error",
+    "no-return-await": "error",
+    "require-await": "warn",
+    "handle-callback-err": "error",
+    "no-shadow": "warn"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "coverage/",
+    "dist/",
+    "uploads/",
+    "examples/"
+  ],
+  "overrides": [
+    {
+      "files": ["test/**/*.js", "**/*.test.js", "**/*.spec.js"],
+      "env": { "jest": true },
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
+}

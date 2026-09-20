@@ -1,0 +1,80 @@
+{
+  "name": "@shivank44/node-multi-uploader",
+  "version": "1.0.0",
+  "description": "A unified Node.js file upload library supporting local filesystem, Google Cloud Storage (GCS), and AWS S3 with a single, consistent API.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "prepublishOnly": "npm run lint && npm test"
+  },
+  "keywords": [
+    "file-upload",
+    "upload",
+    "storage",
+    "aws",
+    "s3",
+    "gcs",
+    "google-cloud-storage",
+    "local-storage",
+    "filesystem",
+    "multer",
+    "stream",
+    "adapter",
+    "multipart",
+    "node"
+  ],
+  "author": "Shivank Srivastava <shivanksrivastava4@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivank44/node-multi-uploader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shivank44/node-multi-uploader/issues"
+  },
+  "homepage": "https://github.com/shivank44/node-multi-uploader#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@aws-sdk/lib-storage": "^3.0.0",
+    "@google-cloud/storage": "^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@aws-sdk/client-s3": {
+      "optional": true
+    },
+    "@aws-sdk/lib-storage": {
+      "optional": true
+    },
+    "@google-cloud/storage": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.500.0",
+    "@aws-sdk/lib-storage": "^3.500.0",
+    "@google-cloud/storage": "^7.7.0",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "dependencies": {},
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ]
+  }
+}
