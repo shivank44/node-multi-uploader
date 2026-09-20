@@ -1,5 +1,8 @@
 {
   "name": "@shivank44/node-multi-uploader",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.0",
   "description": "A unified Node.js file upload library supporting local filesystem, Google Cloud Storage (GCS), and AWS S3 with a single, consistent API.",
   "main": "src/index.js",
