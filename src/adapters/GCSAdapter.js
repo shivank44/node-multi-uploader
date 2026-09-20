@@ -37,6 +37,7 @@ class GCSAdapter extends BaseAdapter {
       });
 
       writeStream.on('error', reject);
+      file.stream.on('error', reject);
     });
   }
 

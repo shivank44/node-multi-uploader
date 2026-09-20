@@ -3,6 +3,7 @@ const { createMockFile } = require('./helpers/mockFile');
 
 // ---- Mock @google-cloud/storage ----
 const mockGcsWriteStream = new EventEmitter();
+mockGcsWriteStream.write = jest.fn();
 mockGcsWriteStream.end = jest.fn();
 
 const mockFile = {
