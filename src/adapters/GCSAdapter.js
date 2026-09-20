@@ -1,18 +1,17 @@
-// src/adapters/GCSAdapter.js
-const { Storage } = require('@google-cloud/storage');
+const { Storage: GoogleCloudStorage } = require('@google-cloud/storage');
 const BaseAdapter = require('./BaseAdapter');
 
 class GCSAdapter extends BaseAdapter {
   constructor(config) {
     super();
-    this.storage = new Storage({
+    this.storage = new GoogleCloudStorage({
       projectId: config.projectId,
       keyFilename: config.keyFilename, // Path to service account JSON
     });
     this.bucket = this.storage.bucket(config.bucketName);
   }
 
-  async upload(file, options = {}) {
+  upload(file, options = {}) {
     const destination = options.destination || `uploads/${Date.now()}-${file.originalname}`;
     const gcsFile = this.bucket.file(destination);
 

@@ -64,12 +64,13 @@
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1136.0",
     "@aws-sdk/lib-storage": "^3.1136.0",
+    "@eslint/js": "^10.0.1",
     "@google-cloud/storage": "^8.2.0",
     "eslint": "^10.11.0",
+    "globals": "^17.12.0",
     "jest": "^30.5.2",
     "multer": "^2.4.0"
   },
-  "dependencies": {},
   "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
